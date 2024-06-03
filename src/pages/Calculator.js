@@ -1,9 +1,7 @@
 import { useReducer } from "react";
-import Button from "../components/Button";
-import DigitButton from "../components/DigitButton";
-import OperationButton from "../components/OperationButton";
-import { type } from "@testing-library/user-event/dist/type";
-import { prettyDOM } from "@testing-library/react";
+import Button from "../components/btn/Button";
+import DigitButton from "../components/btn/DigitButton";
+import OperationButton from "../components/btn/OperationButton";
 
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
@@ -12,7 +10,7 @@ export const ACTIONS = {
   CLEAR: "clear-all",
   EVALUATE: "evaluate",
 };
-
+ 
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -97,6 +95,9 @@ function reducer(state, { type, payload }) {
         operation: null,
         current: evaluate(state),
       };
+
+      default: 
+        return;
   }
 }
 function evaluate({ current, previous, operation }) {

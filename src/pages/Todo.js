@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "../components/Button.js";
+import Button from "../components/btn/Button.js";
 import TextInput from "../components/TextInput";
-import RemoveButton from "../components/RemoveButton";
+import RemoveButton from "../components/btn/RemoveButton";
 
 function Todo() {
   const [todos, setTodos] = useState([]);

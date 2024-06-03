@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBarButton from "./NavBarButton";
+import NavBarButton from "./btn/NavBarButton";
 
 function NavLink({ to, children }) {
   return (
