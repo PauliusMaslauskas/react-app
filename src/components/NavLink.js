@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBarButton from "./btn/NavBarButton";
+import Button from "./btn/Button";
 
 function NavLink({ to, children }) {
   return (
     <Link to={to}>
-      <NavBarButton>{children}</NavBarButton>
+      <Button variant="black">{children}</Button>
     </Link>
   );
 }
