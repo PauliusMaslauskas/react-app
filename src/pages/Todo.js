@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/btn/Button.js";
 import TextInput from "../components/TextInput";
-import RemoveButton from "../components/btn/RemoveButton";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -45,14 +44,14 @@ function Todo() {
           <ul className="list-decimal">
             {todos.map((item, index) => (
               <li
-                className=" font-semibold text-sky-700/100 indent-5 flex items-center justify-between my-2 divide-y divide-slate-700 border-t-2 border-sky-400/25"
+                className=" font-semibold text-slate-800 indent-5 flex items-center justify-between my-2 divide-y divide-slate-700 border-t-2 border-sky-400/25"
                 key={index}
               >
                 {item}
                 <div>
-                  <RemoveButton onClick={(e) => removeTodo(index)}>
+                  <Button onClick={(e) => removeTodo(index)}>
                     -
-                  </RemoveButton>
+                  </Button>
                 </div>
               </li>
             ))}
